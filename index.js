@@ -6,19 +6,11 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Shiper backend is running");
+  res.send("Backend is running");
 });
 
 app.post("/submit", (req, res) => {
-  const data = req.body;
-
-  console.log("Form data:", data);
-
-  // sirf contact / message data hona chahiye
-  res.json({
-    success: true,
-    message: "Data received successfully"
-  });
+  res.json({ success: true });
 });
 
 const PORT = process.env.PORT || 3000;
